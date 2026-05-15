@@ -1,4 +1,5 @@
-using System;
+п»їusing System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
@@ -8,77 +9,83 @@ namespace WBT_2
 {
     public partial class Form1 : Form
     {
-        private WeightBalancedTree tree = new WeightBalancedTree();
+        private const string PlaceholderText = "Enter the node";
+        private const int NodeRadius = 20;
+        private const int NodeGap = 60;
+
+        private readonly WeightBalancedTree tree = new WeightBalancedTree();
         private int? highlightedKey = null;
 
         public Form1()
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
+            DoubleBuffered = true;
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MyMenuColors());
-            // Настраиваем Enter для текстового поля
+            SetMenuTextColor(menuStrip1.Items, Color.White);
+            showWeightsToolStripMenuItem.CheckOnClick = true;
+
+            txtInput.Text = PlaceholderText;
+            txtInput.ForeColor = Color.Gray;
+
             txtInput.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter)
                 {
-                    btnAdd_Click(this, new EventArgs());
-                    e.SuppressKeyPress = true; // Убирает звук "бип"
+                    btnAdd_Click(this, EventArgs.Empty);
+                    e.SuppressKeyPress = true;
                 }
             };
         }
 
-        public WeightBalancedTree WeightBalancedTree
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        // в”Ђв”Ђв”Ђ РљРЅРѕРїРєРё в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtInput.Text, out int val))
+            if (!TryGetInput(out int val)) return;
+
+            if (tree.Search(tree.Root, val))
+                MessageBox.Show("Such an element already exists!");
+            else
             {
-                if (tree.Search(tree.Root, val))
-                {
-                    MessageBox.Show("Такой элемент уже есть!");
-                }
-                else
-                {
-                    tree.Insert(val);
-                    highlightedKey = val;
-                }
-                txtInput.Clear();
-                canvas.Invalidate();
+                tree.Insert(val);
+                highlightedKey = val;
             }
+
+            txtInput.Clear();
+            canvas.Invalidate();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtInput.Text, out int val))
+            if (!TryGetInput(out int val)) return;
+
+            if (tree.Search(tree.Root, val))
+                highlightedKey = val;
+            else
             {
-                if (tree.Search(tree.Root, val)) highlightedKey = val;
-                else { highlightedKey = null; MessageBox.Show("Не найдено"); }
-                canvas.Invalidate();
+                highlightedKey = null;
+                MessageBox.Show("Element not found");
             }
+
+            canvas.Invalidate();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e) // Убедись, что кнопка называется btnDelete
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(txtInput.Text, out int val))
+            if (!TryGetInput(out int val)) return;
+
+            if (tree.Search(tree.Root, val))
             {
-                if (tree.Search(tree.Root, val))
-                {
-                    tree.Delete(val);
-                    highlightedKey = null;
-                }
-                else
-                {
-                    MessageBox.Show("Элемент не найден для удаления");
-                }
-                txtInput.Clear();
-                canvas.Invalidate();
+                tree.Delete(val);
+                highlightedKey = null;
             }
+            else
+            {
+                MessageBox.Show("Element not found for deletion");
+            }
+
+            txtInput.Clear();
+            canvas.Invalidate();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -87,6 +94,8 @@ namespace WBT_2
             highlightedKey = null;
             canvas.Invalidate();
         }
+
+        // в”Ђв”Ђв”Ђ РћС‚СЂРёСЃРѕРІРєР° в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
@@ -97,66 +106,95 @@ namespace WBT_2
 
         private void DrawNode(Graphics g, WBTNode node, int x, int y, int xOffset)
         {
-            const int radius = 20;
-            const int gap = 60;
-
             if (node.Left != null)
             {
-                g.DrawLine(Pens.Black, x, y, x - xOffset, y + gap);
-                DrawNode(g, node.Left, x - xOffset, y + gap, xOffset / 2);
+                g.DrawLine(Pens.Black, x, y, x - xOffset, y + NodeGap);
+                DrawNode(g, node.Left, x - xOffset, y + NodeGap, xOffset / 2);
             }
             if (node.Right != null)
             {
-                g.DrawLine(Pens.Black, x, y, x + xOffset, y + gap);
-                DrawNode(g, node.Right, x + xOffset, y + gap, xOffset / 2);
+                g.DrawLine(Pens.Black, x, y, x + xOffset, y + NodeGap);
+                DrawNode(g, node.Right, x + xOffset, y + NodeGap, xOffset / 2);
             }
 
-            var fill = (node.Key == highlightedKey) ? Brushes.Gold : Brushes.White;
-            g.FillEllipse(fill, x - radius, y - radius, radius * 2, radius * 2);
-            g.DrawEllipse(Pens.Black, x - radius, y - radius, radius * 2, radius * 2);
+            var fill = node.Key == highlightedKey ? Brushes.Gold : Brushes.White;
+            var rect = new Rectangle(x - NodeRadius, y - NodeRadius, NodeRadius * 2, NodeRadius * 2);
+            g.FillEllipse(fill, rect);
+            g.DrawEllipse(Pens.Black, rect);
 
-            string txt = node.Key.ToString();
-            var size = g.MeasureString(txt, this.Font);
-            g.DrawString(txt, this.Font, Brushes.Black, x - size.Width / 2, y - size.Height / 2);
-            g.DrawString($"s:{node.Size}", this.Font, Brushes.Blue, x - 10, y + radius + 2);
+            DrawCenteredString(g, node.Key.ToString(), Font, Brushes.Black, x, y);
+
+            if (showWeightsToolStripMenuItem.Checked)
+            {
+                string sizeTxt = $"s:{node.Size}";
+                var sSize = g.MeasureString(sizeTxt, Font);
+                g.DrawString(sizeTxt, Font, Brushes.Green, x - sSize.Width / 2, y + NodeRadius + 2);
+            }
         }
 
-        // 1. ВЫГРУЗИТЬ (Сохранение структуры дерева в файл)
+        private void DrawCenteredString(Graphics g, string text, Font font, Brush brush, float cx, float cy)
+        {
+            var size = g.MeasureString(text, font);
+            g.DrawString(text, font, brush, cx - size.Width / 2, cy - size.Height / 2);
+        }
+
+        // в”Ђв”Ђв”Ђ Р¤Р°Р№Р»РѕРІС‹Рµ РѕРїРµСЂР°С†РёРё в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
+
         private void uploadBtn_Click(object sender, EventArgs e)
         {
-            if (tree.Root == null)
+            using (var ofd = new OpenFileDialog { Filter = "Text Files (*.txt)|*.txt" })
             {
-                MessageBox.Show("Дерево пустое. Нечего выгружать.");
-                return;
-            }
+                if (ofd.ShowDialog() != DialogResult.OK) return;
 
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "Text Files (*.txt)|*.txt";
-                sfd.DefaultExt = "txt";
-                sfd.FileName = "my_tree_data";
-
-                if (sfd.ShowDialog() == DialogResult.OK)
+                try
                 {
-                    try
-                    {
-                        // Собираем все ключи дерева в список (в порядке возрастания - InOrder)
-                        List<int> keys = new List<int>();
-                        GetAllKeys(tree.Root, keys);
+                    var parts = System.IO.File.ReadAllText(ofd.FileName)
+                        .Split(new[] { ' ', ',', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
-                        // Сохраняем ключи через пробел
-                        System.IO.File.WriteAllText(sfd.FileName, string.Join(" ", keys));
-                        MessageBox.Show("Дерево успешно сохранено в файл.");
-                    }
-                    catch (Exception ex)
+                    if (parts.Length == 0) { MessageBox.Show("The file is empty."); return; }
+
+                    tree.Root = null;
+                    int count = 0;
+
+                    foreach (var p in parts)
                     {
-                        MessageBox.Show($"Ошибка при сохранении: {ex.Message}");
+                        if (int.TryParse(p, out int val) && !tree.Search(tree.Root, val))
+                        {
+                            tree.Insert(val);
+                            count++;
+                        }
                     }
+
+                    highlightedKey = null;
+                    canvas.Invalidate();
+                    MessageBox.Show($"Loading complete. Nodes added: {count}");
                 }
+                catch (Exception ex) { MessageBox.Show($"File read error: {ex.Message}"); }
             }
         }
 
-        // Вспомогательный метод для сбора всех ключей (рекурсивный)
+        private void downloadBtn_Click(object sender, EventArgs e) => SaveTreeToFile();
+        private void saveAsTxtToolStripMenuItem_Click(object sender, EventArgs e) => SaveTreeToFile();
+
+        private void SaveTreeToFile()
+        {
+            if (tree.Root == null) { MessageBox.Show("The tree is empty. There is nothing to upload."); return; }
+
+            using (var sfd = new SaveFileDialog { Filter = "Text Files (*.txt)|*.txt", DefaultExt = "txt", FileName = "my_tree_data" })
+            {
+                if (sfd.ShowDialog() != DialogResult.OK) return;
+
+                try
+                {
+                    var keys = new List<int>();
+                    GetAllKeys(tree.Root, keys);
+                    System.IO.File.WriteAllText(sfd.FileName, string.Join(" ", keys));
+                    MessageBox.Show("The tree has been successfully saved to file.");
+                }
+                catch (Exception ex) { MessageBox.Show($"Error saving: {ex.Message}"); }
+            }
+        }
+
         private void GetAllKeys(WBTNode node, List<int> list)
         {
             if (node == null) return;
@@ -165,93 +203,101 @@ namespace WBT_2
             GetAllKeys(node.Right, list);
         }
 
-        // 2. ЗАГРУЗИТЬ (Чтение из файла и построение дерева)
-        private void downloadBtn_Click(object sender, EventArgs e)
+        private void saveAsPngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            if (tree.Root == null) { MessageBox.Show("The tree is empty, there is nothing to save."); return; }
+
+            using (var sfd = new SaveFileDialog { Filter = "PNG Image|*.png|JPEG Image|*.jpg", FileName = "wbt_tree_export" })
             {
-                ofd.Filter = "Text Files (*.txt)|*.txt";
+                if (sfd.ShowDialog() != DialogResult.OK) return;
 
-                if (ofd.ShowDialog() == DialogResult.OK)
+                using (var bmp = new Bitmap(canvas.Width, canvas.Height))
+                using (var g = Graphics.FromImage(bmp))
                 {
-                    try
-                    {
-                        string content = System.IO.File.ReadAllText(ofd.FileName);
-                        // Разделяем строку по пробелам, запятым или переносам строк
-                        string[] parts = content.Split(new char[] { ' ', ',', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
+                    g.SmoothingMode = SmoothingMode.AntiAlias;
+                    g.Clear(Color.White);
+                    DrawNode(g, tree.Root, canvas.Width / 2, 40, canvas.Width / 4);
 
-                        if (parts.Length == 0)
-                        {
-                            MessageBox.Show("Файл пуст.");
-                            return;
-                        }
+                    var format = sfd.FileName.EndsWith(".jpg")
+                        ? System.Drawing.Imaging.ImageFormat.Jpeg
+                        : System.Drawing.Imaging.ImageFormat.Png;
 
-                        // Очищаем текущее дерево перед загрузкой (по желанию)
-                        tree.Root = null;
-                        int count = 0;
-
-                        foreach (string p in parts)
-                        {
-                            // Проверка: является ли значение целым числом
-                            if (int.TryParse(p, out int val))
-                            {
-                                // Проверка на дубликаты перед вставкой
-                                if (!tree.Search(tree.Root, val))
-                                {
-                                    tree.Insert(val);
-                                    count++;
-                                }
-                            }
-                        }
-
-                        highlightedKey = null;
-                        canvas.Invalidate(); // Перерисовываем
-                        MessageBox.Show($"Загрузка завершена. Добавлено узлов: {count}");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка при чтении файла: {ex.Message}");
-                    }
+                    try { bmp.Save(sfd.FileName, format); MessageBox.Show("Image saved successfully!"); }
+                    catch (Exception ex) { MessageBox.Show($"Error saving: {ex.Message}"); }
                 }
             }
         }
 
-        // 3. СПРАВКА (Информация о программе)
-        private void infoBtn_Click(object sender, EventArgs e)
-        {
-            string info = "ПРОГРАММА ВИЗУАЛИЗАЦИИ WBT-ДЕРЕВА\n\n" +
-                          "WBT (Weight-Balanced Tree) — это весово-сбалансированное дерево поиска.\n\n" +
-                          "ОСНОВНЫЕ ФУНКЦИИ:\n" +
-                          "• Добавить: вставляет новый узел (целое число) и балансирует дерево.\n" +
-                          "• Удалить: удаляет узел с автоматической перебалансировкой.\n" +
-                          "• Найти: подсвечивает узел золотистым цветом.\n" +
-                          "• Очистить: полностью удаляет все узлы.\n\n" +
-                          "УПРАВЛЕНИЕ ФАЙЛАМИ:\n" +
-                          "• Выгрузить: сохраняет текущие ключи в текстовый файл.\n" +
-                          "• Загрузить: строит дерево из чисел, считанных из файла.\n\n" +
-                          "ПАРАМЕТРЫ БАЛАНСА:\n" +
-                          "Программа использует коэффициент Omega = 2. Узел подписывается весом 's' (размер поддерева).";
+        // в”Ђв”Ђв”Ђ РўРµРјР°, РјРµРЅСЋ, СѓС‚РёР»РёС‚С‹ в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 
-            MessageBox.Show(info, "Справка по программе", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        private void swithThemeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            bool isDark = canvas.BackColor != Color.White;
+            canvas.BackColor = isDark ? Color.White : Color.FromArgb(37, 37, 38);
+            panel1.BackColor = isDark ? Color.FromArgb(240, 240, 240) : Color.FromArgb(31, 31, 31);
         }
 
-
-        private void txtInput_Enter(object sender, EventArgs e) => txtInput.Clear();
-
-        private void xToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SetMenuTextColor(ToolStripItemCollection items, Color color)
         {
-            this.Close();
+            foreach (ToolStripItem item in items)
+            {
+                item.ForeColor = color;
+                if (item is ToolStripMenuItem menuItem)
+                    SetMenuTextColor(menuItem.DropDownItems, color);
+            }
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        private void showWeightsToolStripMenuItem_Click(object sender, EventArgs e) => canvas.Invalidate();
+
+        private void faQToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            MessageBox.Show(
+                "WBT-TREE VISUALIZATION PROGRAM\n\n" +
+                "WBT (Weight-Balanced Tree) is a weight-balanced search tree.\n\n" +
+                "MAIN FUNCTIONS:\n" +
+                "вЂў Add: inserts a new node (integer) and balances the tree.\n" +
+                "вЂў Delete: removes a node with automatic rebalancing.\n" +
+                "вЂў Find: highlights the node in gold.\n" +
+                "вЂў Clear: completely removes all nodes.\n\n" +
+                "FILE MANAGEMENT:\n" +
+                "вЂў Unload: saves the current keys to a text file.\n" +
+                "вЂў Load: builds a tree from numbers read from a file.\n\n" +
+                "BALANCE PARAMETERS:\n" +
+                "The program uses Omega = 2. Node label 's' shows subtree size.",
+                "FaQ", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        [DllImport("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        // в”Ђв”Ђв”Ђ Placeholder РґР»СЏ txtInput в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
+
+        private void txtInput_Enter_1(object sender, EventArgs e)
+        {
+            if (txtInput.Text == PlaceholderText)
+            {
+                txtInput.Text = "";
+                txtInput.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtInput_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtInput.Text))
+            {
+                txtInput.Text = PlaceholderText;
+                txtInput.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtInput_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsControl(e.KeyChar) || char.IsDigit(e.KeyChar)) return;
+            if (e.KeyChar == '-' && !txtInput.Text.Contains("-") && txtInput.SelectionStart == 0) return;
+            e.Handled = true;
+        }
+
+        // в”Ђв”Ђв”Ђ Win32 / РїСЂРѕС‡РµРµ в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
+
+        [DllImport("user32.dll")] public static extern bool ReleaseCapture();
+        [DllImport("user32.dll")] public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -262,70 +308,12 @@ namespace WBT_2
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            // В конструкторе или в Form_Load
-            foreach (ToolStripMenuItem item in menuStrip1.Items)
-            {
-                if (item.DropDown is ToolStripDropDownMenu menu)
-                {
-                    menu.ShowImageMargin = false;
-                    menu.ShowCheckMargin = false; // На всякий случай убираем и это
-                }
-            }
-        }
-        private void SaveCanvasImage()
-        {
-            if (tree.Root == null)
-            {
-                MessageBox.Show("Дерево пустое, нечего сохранять.");
-                return;
-            }
+        private void xToolStripMenuItem_Click(object sender, EventArgs e) => Close();
+        private void closeAppToolStripMenuItem1_Click(object sender, EventArgs e) => Close();
+        private void toolStripMenuItem1_Click(object sender, EventArgs e) => WindowState = FormWindowState.Minimized;
 
-            using (SaveFileDialog sfd = new SaveFileDialog())
-            {
-                sfd.Filter = "PNG Image|*.png|JPeg Image|*.jpg";
-                sfd.Title = "Сохранить визуализацию дерева";
-                sfd.FileName = "wbt_tree_export";
+        // в”Ђв”Ђв”Ђ Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ в”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђв”Ђ
 
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    // 1. Создаем Bitmap размером с ваш canvas
-                    Bitmap bmp = new Bitmap(canvas.Width, canvas.Height);
-
-                    // 2. Создаем объект Graphics для рисования на этом Bitmap
-                    using (Graphics g = Graphics.FromImage(bmp))
-                    {
-                        // Настраиваем качество (как в вашем методе Paint)
-                        g.SmoothingMode = SmoothingMode.AntiAlias;
-                        g.Clear(Color.White); // Заливаем фон белым (чтобы не был прозрачным в JPG)
-
-                        // 3. Вызываем ваш существующий метод отрисовки дерева
-                        DrawNode(g, tree.Root, canvas.Width / 2, 40, canvas.Width / 4);
-                    }
-
-                    // 4. Определяем формат и сохраняем
-                    System.Drawing.Imaging.ImageFormat format = System.Drawing.Imaging.ImageFormat.Png;
-                    if (sfd.FileName.EndsWith(".jpg")) format = System.Drawing.Imaging.ImageFormat.Jpeg;
-
-                    try
-                    {
-                        bmp.Save(sfd.FileName, format);
-                        MessageBox.Show("Изображение успешно сохранено!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"Ошибка при сохранении: {ex.Message}");
-                    }
-                    finally
-                    {
-                        bmp.Dispose(); // Освобождаем память
-                    }
-                }
-            }
-        }
-
-        private void saveAsPngToolStripMenuItem_Click(object sender, EventArgs e) => SaveCanvasImage();
-
+        private bool TryGetInput(out int val) => int.TryParse(txtInput.Text, out val);
     }
 }

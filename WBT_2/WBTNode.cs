@@ -2,9 +2,12 @@
 {
     public class WBTNode
     {
-        public int Key, Size = 1;
+        public int Key;
+        public int Size = 1;
         public WBTNode Left, Right;
+
         public WBTNode(int key) => Key = key;
+
         public void Update() => Size = 1 + (Left?.Size ?? 0) + (Right?.Size ?? 0);
     }
 }

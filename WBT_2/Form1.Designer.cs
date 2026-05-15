@@ -34,7 +34,6 @@
             btnSearch = new Button();
             btnClear = new Button();
             panel1 = new Panel();
-            infoBtn = new FontAwesome.Sharp.IconButton();
             downloadBtn = new FontAwesome.Sharp.IconButton();
             uploadBtn = new FontAwesome.Sharp.IconButton();
             txtInput = new TextBox();
@@ -50,9 +49,12 @@
             toolStripMenuItem2 = new ToolStripSeparator();
             closeAppToolStripMenuItem1 = new ToolStripMenuItem();
             vievToolStripMenuItem = new ToolStripMenuItem();
+            swithThemeToolStripMenuItem = new ToolStripMenuItem();
             optionsToolStripMenuItem = new ToolStripMenuItem();
+            showWeightsToolStripMenuItem = new ToolStripMenuItem();
             xToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
+            faQToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)canvas).BeginInit();
             menuStrip1.SuspendLayout();
@@ -60,39 +62,46 @@
             // 
             // btnAdd
             // 
-            resources.ApplyResources(btnAdd, "btnAdd");
             btnAdd.BackColor = Color.White;
             btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 255, 128);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Location = new Point(0, 57);
             btnAdd.Name = "btnAdd";
-            toolTip1.SetToolTip(btnAdd, resources.GetString("btnAdd.ToolTip"));
+            btnAdd.Size = new Size(210, 35);
+            btnAdd.TabIndex = 0;
+            btnAdd.Text = "Add node";
             btnAdd.UseVisualStyleBackColor = false;
             btnAdd.Click += btnAdd_Click;
             // 
             // btnSearch
             // 
-            resources.ApplyResources(btnSearch, "btnSearch");
             btnSearch.BackColor = Color.White;
             btnSearch.FlatAppearance.MouseOverBackColor = Color.FromArgb(128, 255, 255);
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.Location = new Point(0, 98);
             btnSearch.Name = "btnSearch";
-            toolTip1.SetToolTip(btnSearch, resources.GetString("btnSearch.ToolTip"));
+            btnSearch.Size = new Size(210, 35);
+            btnSearch.TabIndex = 1;
+            btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
             // 
             // btnClear
             // 
-            resources.ApplyResources(btnClear, "btnClear");
             btnClear.BackColor = Color.White;
             btnClear.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 128);
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.Location = new Point(0, 139);
             btnClear.Name = "btnClear";
-            toolTip1.SetToolTip(btnClear, resources.GetString("btnClear.ToolTip"));
+            btnClear.Size = new Size(210, 35);
+            btnClear.TabIndex = 2;
+            btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
             // 
             // panel1
             // 
-            resources.ApplyResources(panel1, "panel1");
             panel1.BackColor = Color.FromArgb(31, 31, 31);
-            panel1.Controls.Add(infoBtn);
             panel1.Controls.Add(downloadBtn);
             panel1.Controls.Add(uploadBtn);
             panel1.Controls.Add(txtInput);
@@ -100,160 +109,215 @@
             panel1.Controls.Add(btnAdd);
             panel1.Controls.Add(btnSearch);
             panel1.Controls.Add(btnClear);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(674, 30);
             panel1.Name = "panel1";
-            toolTip1.SetToolTip(panel1, resources.GetString("panel1.ToolTip"));
-            // 
-            // infoBtn
-            // 
-            resources.ApplyResources(infoBtn, "infoBtn");
-            infoBtn.IconChar = FontAwesome.Sharp.IconChar.Info;
-            infoBtn.IconColor = Color.Black;
-            infoBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            infoBtn.Name = "infoBtn";
-            toolTip1.SetToolTip(infoBtn, resources.GetString("infoBtn.ToolTip"));
-            infoBtn.UseVisualStyleBackColor = true;
-            infoBtn.Click += infoBtn_Click;
+            panel1.Size = new Size(210, 581);
+            panel1.TabIndex = 3;
             // 
             // downloadBtn
             // 
-            resources.ApplyResources(downloadBtn, "downloadBtn");
             downloadBtn.IconChar = FontAwesome.Sharp.IconChar.Download;
             downloadBtn.IconColor = Color.Black;
             downloadBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            downloadBtn.Location = new Point(3, 528);
             downloadBtn.Name = "downloadBtn";
-            toolTip1.SetToolTip(downloadBtn, resources.GetString("downloadBtn.ToolTip"));
+            downloadBtn.Size = new Size(97, 50);
+            downloadBtn.TabIndex = 7;
+            toolTip1.SetToolTip(downloadBtn, "Download");
             downloadBtn.UseVisualStyleBackColor = true;
             downloadBtn.Click += downloadBtn_Click;
             // 
             // uploadBtn
             // 
-            resources.ApplyResources(uploadBtn, "uploadBtn");
+            uploadBtn.Anchor = AnchorStyles.Bottom;
             uploadBtn.IconChar = FontAwesome.Sharp.IconChar.Upload;
             uploadBtn.IconColor = Color.Black;
             uploadBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            uploadBtn.Location = new Point(106, 528);
             uploadBtn.Name = "uploadBtn";
-            toolTip1.SetToolTip(uploadBtn, resources.GetString("uploadBtn.ToolTip"));
+            uploadBtn.Size = new Size(101, 50);
+            uploadBtn.TabIndex = 6;
+            toolTip1.SetToolTip(uploadBtn, "Upload tree from text file");
             uploadBtn.UseVisualStyleBackColor = true;
             uploadBtn.Click += uploadBtn_Click;
             // 
             // txtInput
             // 
-            resources.ApplyResources(txtInput, "txtInput");
+            txtInput.Font = new Font("Times New Roman", 18F);
+            txtInput.Location = new Point(0, 12);
+            txtInput.Multiline = true;
             txtInput.Name = "txtInput";
-            toolTip1.SetToolTip(txtInput, resources.GetString("txtInput.ToolTip"));
+            txtInput.Size = new Size(210, 39);
+            txtInput.TabIndex = 5;
+            txtInput.TextAlign = HorizontalAlignment.Center;
+            txtInput.Enter += txtInput_Enter_1;
+            txtInput.KeyPress += txtInput_KeyPress;
+            txtInput.Leave += txtInput_Leave;
             // 
             // btnDelete
             // 
-            resources.ApplyResources(btnDelete, "btnDelete");
             btnDelete.BackColor = Color.White;
             btnDelete.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 128);
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Location = new Point(0, 180);
             btnDelete.Name = "btnDelete";
-            toolTip1.SetToolTip(btnDelete, resources.GetString("btnDelete.ToolTip"));
+            btnDelete.Size = new Size(210, 35);
+            btnDelete.TabIndex = 3;
+            btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = false;
             btnDelete.Click += btnDelete_Click;
             // 
             // canvas
             // 
-            resources.ApplyResources(canvas, "canvas");
             canvas.BackColor = Color.FromArgb(37, 37, 38);
+            canvas.Dock = DockStyle.Fill;
+            canvas.Location = new Point(0, 30);
             canvas.Name = "canvas";
+            canvas.Size = new Size(674, 581);
+            canvas.TabIndex = 4;
             canvas.TabStop = false;
-            toolTip1.SetToolTip(canvas, resources.GetString("canvas.ToolTip"));
             canvas.Paint += canvas_Paint;
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(menuStrip1, "menuStrip1");
+            menuStrip1.AutoSize = false;
             menuStrip1.BackColor = Color.FromArgb(45, 45, 48);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, vievToolStripMenuItem, optionsToolStripMenuItem, xToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, vievToolStripMenuItem, optionsToolStripMenuItem, xToolStripMenuItem, toolStripMenuItem1, faQToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.RenderMode = ToolStripRenderMode.Professional;
-            toolTip1.SetToolTip(menuStrip1, resources.GetString("menuStrip1.ToolTip"));
+            menuStrip1.Size = new Size(884, 30);
+            menuStrip1.TabIndex = 5;
+            menuStrip1.Text = "menuStrip1";
             menuStrip1.MouseDown += menuStrip1_MouseDown;
             // 
             // fileToolStripMenuItem
             // 
-            resources.ApplyResources(fileToolStripMenuItem, "fileToolStripMenuItem");
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveAsTxtToolStripMenuItem, saveAsPngToolStripMenuItem, toolStripMenuItem3, closeAppToolStripMenuItem, toolStripMenuItem2, closeAppToolStripMenuItem1 });
-            fileToolStripMenuItem.ForeColor = Color.White;
+            fileToolStripMenuItem.ForeColor = Color.Black;
+            fileToolStripMenuItem.Image = (Image)resources.GetObject("fileToolStripMenuItem.Image");
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(53, 26);
+            fileToolStripMenuItem.Text = "File";
             // 
             // saveAsTxtToolStripMenuItem
             // 
-            resources.ApplyResources(saveAsTxtToolStripMenuItem, "saveAsTxtToolStripMenuItem");
-            saveAsTxtToolStripMenuItem.ForeColor = Color.White;
+            saveAsTxtToolStripMenuItem.BackColor = SystemColors.Control;
+            saveAsTxtToolStripMenuItem.ForeColor = Color.Black;
             saveAsTxtToolStripMenuItem.Name = "saveAsTxtToolStripMenuItem";
+            saveAsTxtToolStripMenuItem.Size = new Size(180, 22);
+            saveAsTxtToolStripMenuItem.Text = "Save as txt";
+            saveAsTxtToolStripMenuItem.Click += saveAsTxtToolStripMenuItem_Click;
             // 
             // saveAsPngToolStripMenuItem
             // 
-            resources.ApplyResources(saveAsPngToolStripMenuItem, "saveAsPngToolStripMenuItem");
-            saveAsPngToolStripMenuItem.ForeColor = Color.White;
+            saveAsPngToolStripMenuItem.ForeColor = Color.Black;
             saveAsPngToolStripMenuItem.Name = "saveAsPngToolStripMenuItem";
+            saveAsPngToolStripMenuItem.Size = new Size(180, 22);
+            saveAsPngToolStripMenuItem.Text = "Save as picture";
             saveAsPngToolStripMenuItem.Click += saveAsPngToolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
-            resources.ApplyResources(toolStripMenuItem3, "toolStripMenuItem3");
             toolStripMenuItem3.Name = "toolStripMenuItem3";
+            toolStripMenuItem3.Size = new Size(177, 6);
             // 
             // closeAppToolStripMenuItem
             // 
-            resources.ApplyResources(closeAppToolStripMenuItem, "closeAppToolStripMenuItem");
-            closeAppToolStripMenuItem.ForeColor = Color.White;
+            closeAppToolStripMenuItem.ForeColor = Color.Black;
             closeAppToolStripMenuItem.Name = "closeAppToolStripMenuItem";
+            closeAppToolStripMenuItem.Size = new Size(180, 22);
+            closeAppToolStripMenuItem.Text = "Fill tree from txt";
             // 
             // toolStripMenuItem2
             // 
-            resources.ApplyResources(toolStripMenuItem2, "toolStripMenuItem2");
             toolStripMenuItem2.Name = "toolStripMenuItem2";
+            toolStripMenuItem2.Size = new Size(177, 6);
             // 
             // closeAppToolStripMenuItem1
             // 
-            resources.ApplyResources(closeAppToolStripMenuItem1, "closeAppToolStripMenuItem1");
-            closeAppToolStripMenuItem1.ForeColor = Color.White;
+            closeAppToolStripMenuItem1.ForeColor = Color.Black;
             closeAppToolStripMenuItem1.Name = "closeAppToolStripMenuItem1";
+            closeAppToolStripMenuItem1.Size = new Size(180, 22);
+            closeAppToolStripMenuItem1.Text = "Close app";
+            closeAppToolStripMenuItem1.Click += closeAppToolStripMenuItem1_Click;
             // 
             // vievToolStripMenuItem
             // 
-            resources.ApplyResources(vievToolStripMenuItem, "vievToolStripMenuItem");
+            vievToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { swithThemeToolStripMenuItem });
             vievToolStripMenuItem.ForeColor = Color.White;
             vievToolStripMenuItem.Name = "vievToolStripMenuItem";
+            vievToolStripMenuItem.Size = new Size(44, 26);
+            vievToolStripMenuItem.Text = "View";
+            // 
+            // swithThemeToolStripMenuItem
+            // 
+            swithThemeToolStripMenuItem.Name = "swithThemeToolStripMenuItem";
+            swithThemeToolStripMenuItem.Size = new Size(143, 22);
+            swithThemeToolStripMenuItem.Text = "Swith Theme";
+            swithThemeToolStripMenuItem.Click += swithThemeToolStripMenuItem_Click;
             // 
             // optionsToolStripMenuItem
             // 
-            resources.ApplyResources(optionsToolStripMenuItem, "optionsToolStripMenuItem");
+            optionsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { showWeightsToolStripMenuItem });
             optionsToolStripMenuItem.ForeColor = Color.White;
             optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            optionsToolStripMenuItem.Size = new Size(61, 26);
+            optionsToolStripMenuItem.Text = "Options";
+            // 
+            // showWeightsToolStripMenuItem
+            // 
+            showWeightsToolStripMenuItem.Checked = true;
+            showWeightsToolStripMenuItem.CheckState = CheckState.Checked;
+            showWeightsToolStripMenuItem.Name = "showWeightsToolStripMenuItem";
+            showWeightsToolStripMenuItem.Size = new Size(150, 22);
+            showWeightsToolStripMenuItem.Text = "Show weights ";
+            showWeightsToolStripMenuItem.Click += showWeightsToolStripMenuItem_Click;
             // 
             // xToolStripMenuItem
             // 
-            resources.ApplyResources(xToolStripMenuItem, "xToolStripMenuItem");
             xToolStripMenuItem.Alignment = ToolStripItemAlignment.Right;
+            xToolStripMenuItem.AutoSize = false;
             xToolStripMenuItem.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            xToolStripMenuItem.Font = new Font("Segoe Fluent Icons", 9F, FontStyle.Bold);
+            xToolStripMenuItem.Image = (Image)resources.GetObject("xToolStripMenuItem.Image");
             xToolStripMenuItem.Name = "xToolStripMenuItem";
+            xToolStripMenuItem.Size = new Size(40, 30);
             xToolStripMenuItem.Click += xToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
-            resources.ApplyResources(toolStripMenuItem1, "toolStripMenuItem1");
             toolStripMenuItem1.Alignment = ToolStripItemAlignment.Right;
+            toolStripMenuItem1.AutoSize = false;
+            toolStripMenuItem1.Font = new Font("Marlett", 9F, FontStyle.Bold);
+            toolStripMenuItem1.Image = (Image)resources.GetObject("toolStripMenuItem1.Image");
             toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(40, 30);
             toolStripMenuItem1.Click += toolStripMenuItem1_Click;
+            // 
+            // faQToolStripMenuItem
+            // 
+            faQToolStripMenuItem.Name = "faQToolStripMenuItem";
+            faQToolStripMenuItem.Size = new Size(40, 26);
+            faQToolStripMenuItem.Text = "FaQ";
+            faQToolStripMenuItem.Click += faQToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AcceptButton = btnAdd;
-            resources.ApplyResources(this, "$this");
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(45, 45, 48);
+            ClientSize = new Size(884, 611);
             Controls.Add(canvas);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "Form1";
-            toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
-            Load += Form1_Load;
+            Text = "WBT Tree";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)canvas).EndInit();
@@ -273,7 +337,6 @@
         private Button btnDelete;
         private FontAwesome.Sharp.IconButton downloadBtn;
         private FontAwesome.Sharp.IconButton uploadBtn;
-        private FontAwesome.Sharp.IconButton infoBtn;
         private ToolTip toolTip1;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem vievToolStripMenuItem;
@@ -287,5 +350,8 @@
         private ToolStripSeparator toolStripMenuItem3;
         private ToolStripSeparator toolStripMenuItem2;
         private ToolStripMenuItem closeAppToolStripMenuItem1;
+        private ToolStripMenuItem swithThemeToolStripMenuItem;
+        private ToolStripMenuItem faQToolStripMenuItem;
+        private ToolStripMenuItem showWeightsToolStripMenuItem;
     }
 }

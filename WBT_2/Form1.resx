@@ -117,486 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAABixJREFUeF7t
-        3bGKllcYhVExkJQpUlsJkkByAzYyChYBUUHBBCxsBEGtvAVT2Ke0SmkXiJ1YRbC1EgQvxOYJY8DiFVF0
-        1Pm/sxa8d7DZ+4cZvnPkCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        sCOqo9VP1ZnqYnXZOefcgd5+t+5VJ2YHwxdVnaruVU8D4Et7Ut2tTs5+hgNXfVvdqZ7PJALw1Tyrbs3O
-        hgNR3Z6JA+BQeVVdn/0NH6X6uXo8UwbAofWwOj77HD5YdWWmCoCdcW72OrxXdXMmCYCdc232O7xTdWMm
-        CICddXX2PLylOj+TA8DOOz37Ht6ojs3EALAJL6vvZ+/Da9WDmRgANuP+7H3YH/9LMykAbM7Z2f8srnox
-        UwLA5jya/c/CqgszIQBs1t7cARZV/T3TAcBm/TV3gAVVP8xkALB538w9YDHVbzMVAGzer3MPWEz150wF
-        AJt3d+4Bi6n+nakAYPP+mXvAYmYiAFjD3AMWsv9PIDMQAKxhbgIL2f8u9AwEAGuYm8BC/AAAWNfcBBbi
-        TwAA65qbwGJmIABYw9wDFlM9maEAYPMezj1gMT4EBLCkP+YesJjq95kKADbPp4BX5zEggCV5DAjPAQMs
-        xnPA/K+6MNMBwGbtzR1gYdWLmRAANufR7H8WV12aKQFgc87O/of9HwEPZlIA2Iz7s/fhterYTAsAm/By
-        //2X2fvwRnV+pgaAnXd69j28pboxkwPAzro6ex7eqbo5EwTAzrk2+x3eq7oykwTAzjg3ex0+WPVL9Xim
-        CoBD62F1fPY5fJTq9kwYAIfKq+r67G/4ZNV31Z3q+UwdAF/Ns+rW7Gz4LKpT1b3q6UwiAJ/dk+pudXL2
-        M3wx1dHqx+pMdbG67Jxz7kBvv1v3qhOzgwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAgMPsP/1MJZUmRbU7AAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="downloadBtn.ToolTip" xml:space="preserve">
-    <value>Download</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="canvas.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnSearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 35</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
-    <value>toolStripMenuItem1</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
-    <value>btnDelete</value>
-  </data>
-  <data name="txtInput.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="infoBtn.ToolTip" xml:space="preserve">
-    <value>Info about program</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripMenuItem1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;canvas.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>884, 30</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
-    <value>toolStripMenuItem2</value>
-  </data>
-  <data name="infoBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 50</value>
-  </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="vievToolStripMenuItem.Text" xml:space="preserve">
-    <value>View</value>
-  </data>
-  <data name="&gt;&gt;closeAppToolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtInput.Name" xml:space="preserve">
-    <value>txtInput</value>
-  </data>
-  <data name="&gt;&gt;canvas.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;saveAsTxtToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
-    <value>toolStripMenuItem3</value>
-  </data>
-  <data name="uploadBtn.ToolTip" xml:space="preserve">
-    <value>Upload tree from text file</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnClear.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="canvas.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="toolStripMenuItem1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Marlett, 9pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;downloadBtn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnDelete.Text" xml:space="preserve">
-    <value>Del</value>
-  </data>
-  <data name="&gt;&gt;saveAsPngToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="closeAppToolStripMenuItem1.Text" xml:space="preserve">
-    <value>Close app</value>
-  </data>
-  <data name="btnAdd.Text" xml:space="preserve">
-    <value>Add node</value>
-  </data>
-  <data name="uploadBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
-  </data>
-  <data name="&gt;&gt;uploadBtn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;canvas.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="canvas.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnAdd.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtInput.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 12</value>
-  </data>
-  <data name="btnClear.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="txtInput.Text" xml:space="preserve">
-    <value>Enter the node</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>884, 611</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="txtInput.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 18pt</value>
-  </data>
-  <data name="optionsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Options</value>
-  </data>
-  <data name="closeAppToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>53, 26</value>
-  </data>
-  <data name="txtInput.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 39</value>
-  </data>
-  <data name="btnAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 57</value>
-  </data>
-  <data name="btnDelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;vievToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="xToolStripMenuItem.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="saveAsTxtToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="btnClear.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 35</value>
-  </data>
-  <data name="menuStrip1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 581</value>
-  </data>
-  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 180</value>
-  </data>
-  <data name="&gt;&gt;downloadBtn.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
-  <data name="&gt;&gt;txtInput.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="canvas.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="saveAsTxtToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save as txt</value>
-  </data>
-  <data name="menuStrip1.AutoSize" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnClear.Text" xml:space="preserve">
-    <value>Clear</value>
-  </data>
-  <data name="saveAsPngToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save as png</value>
-  </data>
-  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
-    <value>btnClear</value>
-  </data>
-  <data name="uploadBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Name" xml:space="preserve">
-    <value>btnSearch</value>
-  </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="vievToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 26</value>
-  </data>
-  <data name="&gt;&gt;closeAppToolStripMenuItem1.Name" xml:space="preserve">
-    <value>closeAppToolStripMenuItem1</value>
-  </data>
-  <data name="uploadBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 50</value>
-  </data>
-  <data name="&gt;&gt;closeAppToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnSearch.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;canvas.Name" xml:space="preserve">
-    <value>canvas</value>
-  </data>
-  <data name="btnSearch.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnAdd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;infoBtn.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
-  <data name="&gt;&gt;optionsToolStripMenuItem.Name" xml:space="preserve">
-    <value>optionsToolStripMenuItem</value>
-  </data>
-  <data name="panel1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>154, 6</value>
-  </data>
-  <data name="btnDelete.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripSeparator, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;uploadBtn.Type" xml:space="preserve">
-    <value>FontAwesome.Sharp.IconButton, FontAwesome.Sharp, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f</value>
-  </data>
-  <data name="btnSearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 98</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="btnAdd.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="closeAppToolStripMenuItem.Text" xml:space="preserve">
-    <value>Fill tree from txt</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>674, 30</value>
-  </data>
-  <data name="&gt;&gt;btnAdd.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="btnClear.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;btnSearch.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Form1</value>
-  </data>
-  <data name="txtInput.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;infoBtn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAA47AAAOOwAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAaAAAAwgAAAN4AAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAA
-        ANwAAADuAAAA7gAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAAN4AAADCAAAAGgAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAcAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAA
-        ACAAAAAgAAAAHQAAAJMAAACTAAAAHQAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAA
-        ABwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAgwAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAACuAAAArgAAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAngAAAK4AAACuAAAAngAAAAgAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAADNAAAALQAAAC4AAADGAAAAHAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAoQAAAOAAAACqAAAArAAA
-        AOUAAABVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQAAAKQAAACiAAAAKwAA
-        AK0AAACsAAAAYAAAAMoAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAACkAAAAowAA
-        ABQAAAAAAAAAgwAAAIMAAAAAAAAAUgAAAMsAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAABsAAAAJAAAAAAAAAAAAAAAAAAAACQAAABoAAAAdAAAAowAA
-        AKMAAAAUAAAAAAAAAAAAAACDAAAAgwAAAAAAAAAAAAAAUgAAAMsAAABRAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsAAACcAAAAyAAAAJ4AAAAYAAAAAAAAABgAAACdAAAAxgAA
-        ANMAAACmAAAAFAAAAAAAAAAAAAAAAAAAAIMAAACDAAAAAAAAAAAAAAAAAAAAUgAAAMgAAAB3AAAAeQAA
-        AEMAAAADAAAAAAAAAAMAAABDAAAAfAAAAEIAAAADAAAAegAAAK0AAAAsAAAArAAAALAAAAB/AAAArwAA
-        AKwAAAAsAAAAsAAAAHEAAAAAAAAAAAAAAAAAAAAAAAAAjwAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAdwAA
-        AN4AAACXAAAAyAAAAFQAAAAcAAAAVAAAAMgAAACYAAAAxwAAAEwAAAB7AAAArAAAACwAAACsAAAAsAAA
-        AH4AAAC0AAAArgAAACsAAACuAAAAawAAAAAAAAAAAAAAAAAAAE8AAADoAAAAgQAAAAAAAAAAAAAAAAAA
-        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
-        AFIAAADVAAAAxgAAAMEAAABXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        ABUAAADBAAAAVwAAAFgAAADAAAAAFQAAAAAAAAAAAAAAggAAAJcAAACfAAAApAAAABUAAAAAAAAAAAAA
-        AAAAAAAAAAAAFwAAAMYAAABYAAAAWAAAAMEAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAFgAAADCAAAAwgAAAFcAAAAAAAAAAAAAAAAAAACJAAAAhwAAABEAAACiAAAAowAA
-        AFAAAAB7AAAAQwAAAAEAAAAVAAAAwAAAAFcAAABYAAAAwAAAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABUAAAAVAAAAAQAAAAAAAAAAAAAAVwAAANMAAADTAAAAVQAA
-        ABMAAACvAAAA2gAAAJcAAADJAAAAQwAAAAAAAABYAAAAwgAAAMIAAABXAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAADBAAAAVgAA
-        AFYAAADBAAAAEQAAAHoAAACWAAAAAAAAAJYAAAB6AAAAAAAAAAEAAAAVAAAAFQAAAAEAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQAA
-        AMAAAABXAAAAVwAAAMAAAAASAAAAQQAAAMcAAACXAAAAxwAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAZAAAANwAAADcAAAAYwAAAAAAAAADAAAATQAAAI0AAABMAAAAAwAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAA4AAAB+AAAAf//n////w////4H///+B////Af///gD///wkf/jgZj/wQO
-        cCAAHngAABx5BAAYQACAAEAAgYJJgQMCAcEDAgHAA4QPwIAAB+HAOABhgDgQfwAwMD8AAnA/AAY4B4YG
-        GAf+Bg8D/w4AA/8MAIf/+ASH//gA///8IP8=
-</value>
-  </data>
-  <data name="canvas.Size" type="System.Drawing.Size, System.Drawing">
-    <value>674, 581</value>
-  </data>
-  <data name="&gt;&gt;saveAsPngToolStripMenuItem.Name" xml:space="preserve">
-    <value>saveAsPngToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;fileToolStripMenuItem.Name" xml:space="preserve">
-    <value>fileToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>WBT Tree</value>
-  </data>
-  <data name="btnClear.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 139</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;btnAdd.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;downloadBtn.Name" xml:space="preserve">
-    <value>downloadBtn</value>
-  </data>
-  <data name="xToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>40, 30</value>
-  </data>
-  <data name="&gt;&gt;downloadBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="btnSearch.ToolTip" xml:space="preserve">
-    <value />
-  </data>
   <data name="fileToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAA7
@@ -698,72 +225,6 @@
         JS0PfyCStJKWhz8QSVpJy8MfiCStpOXhD0SSVtKp/Ad/PGQANQNd6wAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="&gt;&gt;infoBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;vievToolStripMenuItem.Name" xml:space="preserve">
-    <value>vievToolStripMenuItem</value>
-  </data>
-  <data name="downloadBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 537</value>
-  </data>
-  <data name="&gt;&gt;btnAdd.Name" xml:space="preserve">
-    <value>btnAdd</value>
-  </data>
-  <data name="&gt;&gt;uploadBtn.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="infoBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 537</value>
-  </data>
-  <data name="&gt;&gt;txtInput.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="downloadBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;xToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 35</value>
-  </data>
-  <data name="&gt;&gt;uploadBtn.Name" xml:space="preserve">
-    <value>uploadBtn</value>
-  </data>
-  <data name="saveAsPngToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;infoBtn.Name" xml:space="preserve">
-    <value>infoBtn</value>
-  </data>
-  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;btnAdd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;closeAppToolStripMenuItem.Name" xml:space="preserve">
-    <value>closeAppToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;txtInput.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>210, 35</value>
-  </data>
-  <data name="downloadBtn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 50</value>
-  </data>
-  <data name="&gt;&gt;optionsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="xToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAEHtJREFUeF7t
@@ -840,55 +301,115 @@
         AAAAAAAAAACgOf8P7GZ9XBx+AnUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="optionsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 26</value>
+  <data name="toolStripMenuItem1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAABixJREFUeF7t
+        3bGKllcYhVExkJQpUlsJkkByAzYyChYBUUHBBCxsBEGtvAVT2Ke0SmkXiJ1YRbC1EgQvxOYJY8DiFVF0
+        1Pm/sxa8d7DZ+4cZvnPkCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        sCOqo9VP1ZnqYnXZOefcgd5+t+5VJ2YHwxdVnaruVU8D4Et7Ut2tTs5+hgNXfVvdqZ7PJALw1Tyrbs3O
+        hgNR3Z6JA+BQeVVdn/0NH6X6uXo8UwbAofWwOj77HD5YdWWmCoCdcW72OrxXdXMmCYCdc232O7xTdWMm
+        CICddXX2PLylOj+TA8DOOz37Ht6ojs3EALAJL6vvZ+/Da9WDmRgANuP+7H3YH/9LMykAbM7Z2f8srnox
+        UwLA5jya/c/CqgszIQBs1t7cARZV/T3TAcBm/TV3gAVVP8xkALB538w9YDHVbzMVAGzer3MPWEz150wF
+        AJt3d+4Bi6n+nakAYPP+mXvAYmYiAFjD3AMWsv9PIDMQAKxhbgIL2f8u9AwEAGuYm8BC/AAAWNfcBBbi
+        TwAA65qbwGJmIABYw9wDFlM9maEAYPMezj1gMT4EBLCkP+YesJjq95kKADbPp4BX5zEggCV5DAjPAQMs
+        xnPA/K+6MNMBwGbtzR1gYdWLmRAANufR7H8WV12aKQFgc87O/of9HwEPZlIA2Iz7s/fhterYTAsAm/By
+        //2X2fvwRnV+pgaAnXd69j28pboxkwPAzro6ex7eqbo5EwTAzrk2+x3eq7oykwTAzjg3ex0+WPVL9Xim
+        CoBD62F1fPY5fJTq9kwYAIfKq+r67G/4ZNV31Z3q+UwdAF/Ns+rW7Gz4LKpT1b3q6UwiAJ/dk+pudXL2
+        M3wx1dHqx+pMdbG67Jxz7kBvv1v3qhOzgwEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAgMPsP/1MJZUmRbU7AAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="infoBtn.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="closeAppToolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 22</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="txtInput.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;saveAsTxtToolStripMenuItem.Name" xml:space="preserve">
-    <value>saveAsTxtToolStripMenuItem</value>
-  </data>
-  <data name="btnSearch.Text" xml:space="preserve">
-    <value>Serch</value>
-  </data>
-  <data name="&gt;&gt;xToolStripMenuItem.Name" xml:space="preserve">
-    <value>xToolStripMenuItem</value>
-  </data>
-  <data name="txtInput.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="uploadBtn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>70, 531</value>
-  </data>
-  <data name="xToolStripMenuItem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe Fluent Icons, 9pt, style=Bold</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
-  </metadata>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>115, 17</value>
-  </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAA47AAAOOwAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAaAAAAwgAAAN4AAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAA
+        ANwAAADuAAAA7gAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAAN4AAADCAAAAGgAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAcAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAA
+        ACAAAAAgAAAAHQAAAJMAAACTAAAAHQAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAA
+        ABwAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAgwAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcAAACuAAAArgAAABcAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAngAAAK4AAACuAAAAngAAAAgAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAADNAAAALQAAAC4AAADGAAAAHAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAAAAoQAAAOAAAACqAAAArAAA
+        AOUAAABVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQAAAKQAAACiAAAAKwAA
+        AK0AAACsAAAAYAAAAMoAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAACkAAAAowAA
+        ABQAAAAAAAAAgwAAAIMAAAAAAAAAUgAAAMsAAABRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAACQAAABsAAAAJAAAAAAAAAAAAAAAAAAAACQAAABoAAAAdAAAAowAA
+        AKMAAAAUAAAAAAAAAAAAAACDAAAAgwAAAAAAAAAAAAAAUgAAAMsAAABRAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABsAAACcAAAAyAAAAJ4AAAAYAAAAAAAAABgAAACdAAAAxgAA
+        ANMAAACmAAAAFAAAAAAAAAAAAAAAAAAAAIMAAACDAAAAAAAAAAAAAAAAAAAAUgAAAMgAAAB3AAAAeQAA
+        AEMAAAADAAAAAAAAAAMAAABDAAAAfAAAAEIAAAADAAAAegAAAK0AAAAsAAAArAAAALAAAAB/AAAArwAA
+        AKwAAAAsAAAAsAAAAHEAAAAAAAAAAAAAAAAAAAAAAAAAjwAAAIMAAAAAAAAAAAAAAAAAAAAAAAAAdwAA
+        AN4AAACXAAAAyAAAAFQAAAAcAAAAVAAAAMgAAACYAAAAxwAAAEwAAAB7AAAArAAAACwAAACsAAAAsAAA
+        AH4AAAC0AAAArgAAACsAAACuAAAAawAAAAAAAAAAAAAAAAAAAE8AAADoAAAAgQAAAAAAAAAAAAAAAAAA
+        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
+        AFIAAADVAAAAxgAAAMEAAABXAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        ABUAAADBAAAAVwAAAFgAAADAAAAAFQAAAAAAAAAAAAAAggAAAJcAAACfAAAApAAAABUAAAAAAAAAAAAA
+        AAAAAAAAAAAAFwAAAMYAAABYAAAAWAAAAMEAAAAVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAFgAAADCAAAAwgAAAFcAAAAAAAAAAAAAAAAAAACJAAAAhwAAABEAAACiAAAAowAA
+        AFAAAAB7AAAAQwAAAAEAAAAVAAAAwAAAAFcAAABYAAAAwAAAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABUAAAAVAAAAAQAAAAAAAAAAAAAAVwAAANMAAADTAAAAVQAA
+        ABMAAACvAAAA2gAAAJcAAADJAAAAQwAAAAAAAABYAAAAwgAAAMIAAABXAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABUAAADBAAAAVgAA
+        AFYAAADBAAAAEQAAAHoAAACWAAAAAAAAAJYAAAB6AAAAAAAAAAEAAAAVAAAAFQAAAAEAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFQAA
+        AMAAAABXAAAAVwAAAMAAAAASAAAAQQAAAMcAAACXAAAAxwAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAZAAAANwAAADcAAAAYwAAAAAAAAADAAAATQAAAI0AAABMAAAAAwAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAA4AAAB+AAAAf//n////w////4H///+B////Af///gD///wkf/jgZj/wQO
+        cCAAHngAABx5BAAYQACAAEAAgYJJgQMCAcEDAgHAA4QPwIAAB+HAOABhgDgQfwAwMD8AAnA/AAY4B4YG
+        GAf+Bg8D/w4AA/8MAIf/+ASH//gA///8IP8=
+</value>
+  </data>
 </root>

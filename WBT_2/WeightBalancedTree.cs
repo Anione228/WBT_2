@@ -26,7 +26,7 @@
             if (n == null) return new WBTNode(k);
             if (k < n.Key) n.Left = Insert(n.Left, k);
             else if (k > n.Key) n.Right = Insert(n.Right, k);
-            else return n; // Ключ уже есть
+            else return n;
             n.Update();
             return Rebalance(n);
         }
@@ -41,7 +41,8 @@
             {
                 if (n.Left == null) return n.Right;
                 if (n.Right == null) return n.Left;
-                WBTNode min = n.Right;
+
+                var min = n.Right;
                 while (min.Left != null) min = min.Left;
                 n.Key = min.Key;
                 n.Right = Delete(n.Right, min.Key);
@@ -52,33 +53,42 @@
 
         private WBTNode Rebalance(WBTNode n)
         {
-            int lW = (n.Left?.Size ?? 0) + 1;
-            int rW = (n.Right?.Size ?? 0) + 1;
+            int lw = (n.Left?.Size ?? 0) + 1;
+            int rw = (n.Right?.Size ?? 0) + 1;
 
-            if (lW > Omega * rW)
+            if (lw > Omega * rw)
             {
-                if (((n.Left.Right?.Size ?? 0) + 1) > ((n.Left.Left?.Size ?? 0) + 1))
+                if (Weight(n.Left.Right) > Weight(n.Left.Left))
                     n.Left = RotateL(n.Left);
                 return RotateR(n);
             }
-            if (rW > Omega * lW)
+            if (rw > Omega * lw)
             {
-                if (((n.Right.Left?.Size ?? 0) + 1) > ((n.Right.Right?.Size ?? 0) + 1))
+                if (Weight(n.Right.Left) > Weight(n.Right.Right))
                     n.Right = RotateR(n.Right);
                 return RotateL(n);
             }
             return n;
         }
 
-        private WBTNode RotateR(WBTNode y)
+        private static int Weight(WBTNode n) => (n?.Size ?? 0) + 1;
+
+        private static WBTNode RotateR(WBTNode y)
         {
-            var x = y.Left; y.Left = x.Right; x.Right = y;
-            y.Update(); x.Update(); return x;
+            var x = y.Left;
+            y.Left = x.Right;
+            x.Right = y;
+            y.Update(); x.Update();
+            return x;
         }
-        private WBTNode RotateL(WBTNode x)
+
+        private static WBTNode RotateL(WBTNode x)
         {
-            var y = x.Right; x.Right = y.Left; y.Left = x;
-            x.Update(); y.Update(); return y;
+            var y = x.Right;
+            x.Right = y.Left;
+            y.Left = x;
+            x.Update(); y.Update();
+            return y;
         }
     }
 }
