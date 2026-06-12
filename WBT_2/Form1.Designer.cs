@@ -34,6 +34,7 @@
             btnSearch = new Button();
             btnClear = new Button();
             panel1 = new Panel();
+            label1 = new Label();
             downloadBtn = new FontAwesome.Sharp.IconButton();
             uploadBtn = new FontAwesome.Sharp.IconButton();
             txtInput = new TextBox();
@@ -102,6 +103,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(31, 31, 31);
+            panel1.Controls.Add(label1);
             panel1.Controls.Add(downloadBtn);
             panel1.Controls.Add(uploadBtn);
             panel1.Controls.Add(txtInput);
@@ -114,6 +116,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(210, 581);
             panel1.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            label1.ForeColor = Color.Coral;
+            label1.Location = new Point(6, 218);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 21);
+            label1.TabIndex = 8;
             // 
             // downloadBtn
             // 
@@ -206,7 +218,7 @@
             saveAsTxtToolStripMenuItem.BackColor = SystemColors.Control;
             saveAsTxtToolStripMenuItem.ForeColor = Color.Black;
             saveAsTxtToolStripMenuItem.Name = "saveAsTxtToolStripMenuItem";
-            saveAsTxtToolStripMenuItem.Size = new Size(180, 22);
+            saveAsTxtToolStripMenuItem.Size = new Size(157, 22);
             saveAsTxtToolStripMenuItem.Text = "Save as txt";
             saveAsTxtToolStripMenuItem.Click += saveAsTxtToolStripMenuItem_Click;
             // 
@@ -214,32 +226,32 @@
             // 
             saveAsPngToolStripMenuItem.ForeColor = Color.Black;
             saveAsPngToolStripMenuItem.Name = "saveAsPngToolStripMenuItem";
-            saveAsPngToolStripMenuItem.Size = new Size(180, 22);
+            saveAsPngToolStripMenuItem.Size = new Size(157, 22);
             saveAsPngToolStripMenuItem.Text = "Save as picture";
             saveAsPngToolStripMenuItem.Click += saveAsPngToolStripMenuItem_Click;
             // 
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(177, 6);
+            toolStripMenuItem3.Size = new Size(154, 6);
             // 
             // closeAppToolStripMenuItem
             // 
             closeAppToolStripMenuItem.ForeColor = Color.Black;
             closeAppToolStripMenuItem.Name = "closeAppToolStripMenuItem";
-            closeAppToolStripMenuItem.Size = new Size(180, 22);
+            closeAppToolStripMenuItem.Size = new Size(157, 22);
             closeAppToolStripMenuItem.Text = "Fill tree from txt";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(177, 6);
+            toolStripMenuItem2.Size = new Size(154, 6);
             // 
             // closeAppToolStripMenuItem1
             // 
             closeAppToolStripMenuItem1.ForeColor = Color.Black;
             closeAppToolStripMenuItem1.Name = "closeAppToolStripMenuItem1";
-            closeAppToolStripMenuItem1.Size = new Size(180, 22);
+            closeAppToolStripMenuItem1.Size = new Size(157, 22);
             closeAppToolStripMenuItem1.Text = "Close app";
             closeAppToolStripMenuItem1.Click += closeAppToolStripMenuItem1_Click;
             // 
@@ -353,5 +365,6 @@
         private ToolStripMenuItem swithThemeToolStripMenuItem;
         private ToolStripMenuItem faQToolStripMenuItem;
         private ToolStripMenuItem showWeightsToolStripMenuItem;
+        private Label label1;
     }
 }

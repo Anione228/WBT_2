@@ -18,6 +18,14 @@ namespace WBT_2
             }
         }
 
+        public static Form1 Form1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

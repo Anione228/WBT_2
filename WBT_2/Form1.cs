@@ -19,7 +19,7 @@ namespace WBT_2
         public Form1()
         {
             InitializeComponent();
-            DoubleBuffered = true;
+            //DoubleBuffered = false;
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new MyMenuColors());
             SetMenuTextColor(menuStrip1.Items, Color.White);
             showWeightsToolStripMenuItem.CheckOnClick = true;
@@ -35,6 +35,22 @@ namespace WBT_2
                     e.SuppressKeyPress = true;
                 }
             };
+        }
+
+        public WeightBalancedTree WeightBalancedTree
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public MyMenuColors MyMenuColors
+        {
+            get => default;
+            set
+            {
+            }
         }
 
         // ─── Кнопки ──────────────────────────────────────────────────────────
@@ -53,6 +69,7 @@ namespace WBT_2
 
             txtInput.Clear();
             canvas.Invalidate();
+            UpdateCountLabel();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -68,6 +85,7 @@ namespace WBT_2
             }
 
             canvas.Invalidate();
+            UpdateCountLabel();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -86,6 +104,7 @@ namespace WBT_2
 
             txtInput.Clear();
             canvas.Invalidate();
+            UpdateCountLabel();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -93,6 +112,7 @@ namespace WBT_2
             tree.Root = null;
             highlightedKey = null;
             canvas.Invalidate();
+            UpdateCountLabel();
         }
 
         // ─── Отрисовка ───────────────────────────────────────────────────────
@@ -315,5 +335,10 @@ namespace WBT_2
         // ─── Вспомогательное ─────────────────────────────────────────────────
 
         private bool TryGetInput(out int val) => int.TryParse(txtInput.Text, out val);
+        private void UpdateCountLabel()
+        {
+            int count = tree.Root?.Size ?? 0;
+            label1.Text = $"Nodes: {count}";
+        }
     }
 }

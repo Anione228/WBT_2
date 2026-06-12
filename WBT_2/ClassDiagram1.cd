@@ -1,32 +1,77 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="WBT_2.WeightBalancedTree" Collapsed="true">
-    <Position X="5" Y="1.25" Width="1.5" />
+  <Class Name="WBT_2.WeightBalancedTree">
+    <Position X="1.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAEAAAAAAACAAAAAAAAAAAAEAAAAgAAAAAAAgAAQ=</HashCode>
-      <FileName>Form1.cs</FileName>
+      <HashCode>AAQBAEAAAAAAACAAAAAAAAAAACEAAAAgAAAAAAIgAAQ=</HashCode>
+      <FileName>WeightBalancedTree.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WBTNode1" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="WBT_2.WBTNode">
-    <Position X="5.5" Y="2.25" Width="1.5" />
+    <Position X="4.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAgAQAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
-      <FileName>Form1.cs</FileName>
+      <FileName>WBTNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WBTNode1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WBT_2.TreeSettings">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>TreeSetting.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="WBT_2.Program" Collapsed="true">
-    <Position X="3" Y="1.75" Width="1.5" />
+  <Class Name="WBT_2.Program">
+    <Position X="1.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAQAAAAAAAAAAAAAgAgAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Form1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WBT_2.MyMenuColors">
+    <Position X="6.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAACABAAAAAAAIAyADABBAAAIAAAAAAAAAAAAABAAg=</HashCode>
+      <FileName>MyMenuColors.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WBT_2.Form1">
-    <Position X="2.75" Y="2.5" Width="1.5" />
+    <Position X="4.5" Y="0.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="WeightBalancedTree" Type="WBT_2.WeightBalancedTree" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5" Y="2.05" />
+        <Point X="5" Y="4.219" />
+        <Point X="3" Y="4.219" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MyMenuColors" Type="WBT_2.MyMenuColors" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="2.05" />
+        <Point X="5.5" Y="3.234" />
+        <Point X="6.25" Y="3.234" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>IIAAAAAICCAAAAAEgACAAAACAQAAoAAgBAFBAQAIAQY=</HashCode>
+      <HashCode>D9gQABgJKCgIAVACgjCAAADCgSiIoAEkRBFBAVAYAUY=</HashCode>
       <FileName>Form1.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="WeightBalancedTree" />
+      <Property Name="MyMenuColors" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -13,6 +13,14 @@
             }
         }
 
+        public WBTNode WBTNode1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public bool Search(WBTNode n, int k)
         {
             if (n == null) return false;
@@ -53,26 +61,45 @@
 
         private WBTNode Rebalance(WBTNode n)
         {
-            int lw = (n.Left?.Size ?? 0) + 1;
-            int rw = (n.Right?.Size ?? 0) + 1;
+            if (n == null) return null;
 
-            if (lw > Omega * rw)
+            n.Update(); // Обновляем размер текущего узла
+
+            int lw = Weight(n.Left);
+            int rw = Weight(n.Right);
+
+            // ПРАВИЛЬНО: Прибавляем 1 к весу поддерева И ТОЛЬКО ПОТОМ умножаем на Omega
+            if (lw + 1 > Omega * (rw + 1))
             {
-                if (Weight(n.Left.Right) > Weight(n.Left.Left))
+                // Проверяем, нужен ли большой правый поворот (двойной)
+                // Для этого смотрим на внутреннее (правое) поддерево левого узла
+                int l_lw = Weight(n.Left.Left);
+                int l_rw = Weight(n.Left.Right);
+
+                if (l_rw + 1 > l_lw + 1)
+                {
                     n.Left = RotateL(n.Left);
+                }
                 return RotateR(n);
             }
-            if (rw > Omega * lw)
+
+            if (rw + 1 > Omega * (lw + 1))
             {
-                if (Weight(n.Right.Left) > Weight(n.Right.Right))
+                // Проверяем, нужен ли большой левый поворот (двойной)
+                int r_lw = Weight(n.Right.Left);
+                int r_rw = Weight(n.Right.Right);
+
+                if (r_lw + 1 > r_rw + 1)
+                {
                     n.Right = RotateR(n.Right);
+                }
                 return RotateL(n);
             }
+
             return n;
         }
 
-        private static int Weight(WBTNode n) => (n?.Size ?? 0) + 1;
-
+        private static int Weight(WBTNode n) => n?.Size ?? 0;
         private static WBTNode RotateR(WBTNode y)
         {
             var x = y.Left;

@@ -8,6 +8,17 @@
 
         public WBTNode(int key) => Key = key;
 
-        public void Update() => Size = 1 + (Left?.Size ?? 0) + (Right?.Size ?? 0);
+        public WBTNode WBTNode1
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public void Update()
+        {
+            this.Size = (Left?.Size ?? 0) + (Right?.Size ?? 0)+1;
+        }
     }
 }
